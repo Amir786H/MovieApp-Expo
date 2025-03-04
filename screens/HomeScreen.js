@@ -58,7 +58,7 @@ const HomeScreen = () => {
           className="flex-row justify-between items-center mx-4"
           style={{ marginTop: 40 }}
         >
-          <Bars3CenterLeftIcon size={30} strokeWidth={2} color="white" />
+          <Bars3CenterLeftIcon size={30} strokeWidth={2} color="white" onPress={() => navigation.navigate('favorites')}/>
           <Text className="text-white text-3xl font-bold">
             <Text style={styles.text}>M</Text>ovies
           </Text>
