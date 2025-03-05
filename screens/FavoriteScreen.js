@@ -1,26 +1,28 @@
 import {
-    View,
-    Text,
-    Dimensions,
-    Platform,
-  } from "react-native";
-  import React, { useState, useCallback } from "react";
-  import { SafeAreaView } from "react-native-safe-area-context";
-  import { useNavigation } from "@react-navigation/native";
+  Platform,
+  Image,
+  ScrollView,
+} from "react-native";
+import React, { useState, useCallback, useContext } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+import { MovieContext } from "../context/context";
+import MovieList from "../components/movieList";
+
+const ios = Platform.OS == "ios";
+
+export default function FavoriteScreen() {
+  const navigation = useNavigation();
+  const { movies } = useContext(MovieContext);
   
-  var { height, width } = Dimensions.get("window");
-  const ios = Platform.OS == "ios";
-  const verticalMargin = ios ? "" : "my-3";
-  
-  export default function FavoriteScreen() {
-    const navigation = useNavigation();
-  
-    return (
-      <SafeAreaView className="bg-neutral-800 flex-1">
-        <View className="flex-row items-center justify-between mx-4 mt-4">
-            <Text className="text-2xl text-neutral-100">Favorite Movies</Text>
-        </View>
-      </SafeAreaView>
-    );
-  }
-  
+  return (
+    <SafeAreaView className="bg-neutral-800 flex-1">
+
+      <ScrollView showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 10 }}
+      >
+        <MovieList title="Favorite Movie's" data={movies} />
+      </ScrollView>
+    </SafeAreaView>
+  );
+}

@@ -79,8 +79,7 @@ export default function MovieScreen() {
       movies.splice(index, 1); //remove movie if present
       toggleFavourite(!isFavourite)
     }
-    console.log("CONTEXT DATA: ", movies);
-    // return movies; //return updated movies array
+    // console.log("CONTEXT DATA: ", movies);
   }
 
   return (

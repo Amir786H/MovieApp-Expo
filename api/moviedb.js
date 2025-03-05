@@ -36,7 +36,7 @@ const apiCall = async (endpoint, params) => {
     // console.log('RESPONSE:::::::', response);
     return response.data;
   } catch (error) {
-    console.log("error", error);
+    // console.log("error", error);
     return {};
   }
 }
