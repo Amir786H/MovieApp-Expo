@@ -18,7 +18,7 @@ Make sure you have the following installed:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/AwesomeProject.git
+    git clone https://github.com/Amir786H/MovieApp-Expo.git
     ```
 2. Navigate to the project directory:
     ```sh
@@ -55,6 +55,8 @@ If it still doesn't work, it may be due to the router configuration — this is 
 
 ```sh
 npx expo start --tunnel
+     or 
+npx expo start -c
 ```
 
 
